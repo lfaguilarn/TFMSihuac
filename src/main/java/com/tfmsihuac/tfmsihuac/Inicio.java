@@ -20,6 +20,7 @@ public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
         metodo.centrarVentana(this, false);
+        //metodo.ventanaSinBorde(this);
         metodo.cambiarImgLbl(lblFondo, "LogoInicio.jpg");
     }
 
@@ -36,6 +37,7 @@ public class Inicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(700, 300));
         getContentPane().setLayout(null);
         getContentPane().add(lblFondo);
