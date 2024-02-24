@@ -5,7 +5,10 @@
  */
 package Controladores;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
@@ -33,5 +36,14 @@ public class metodos {
       ventana.setResizable(false);
     }
     
+    public void cambiarImgLbl(JLabel lbl, String imagen) 
+    {
+        ImageIcon newicon = null;
+        ImageIcon foto = new javax.swing.ImageIcon(getClass().getResource("/Imagenes/"+imagen));
+        Image img = foto.getImage();
+        Image newimg = img.getScaledInstance(lbl.getBounds().width, lbl.getBounds().height, Image.SCALE_SMOOTH);
+        newicon = new javax.swing.ImageIcon(newimg);
+        lbl.setIcon(newicon);
+    }
     
 }

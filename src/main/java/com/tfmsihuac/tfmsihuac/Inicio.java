@@ -20,7 +20,7 @@ public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
         metodo.centrarVentana(this, false);
-        
+        metodo.cambiarImgLbl(lblFondo, "LogoInicio.jpg");
     }
 
     /**
@@ -32,16 +32,14 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
         setPreferredSize(new java.awt.Dimension(700, 300));
         getContentPane().setLayout(null);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LogoInicio.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 700, 300);
+        getContentPane().add(lblFondo);
+        lblFondo.setBounds(0, 0, 700, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -82,6 +80,6 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblFondo;
     // End of variables declaration//GEN-END:variables
 }
