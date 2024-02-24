@@ -36,12 +36,12 @@ public class Inicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
-        setPreferredSize(new java.awt.Dimension(400, 300));
+        setPreferredSize(new java.awt.Dimension(700, 300));
         getContentPane().setLayout(null);
 
-        jLabel1.setText("Aqui va el fondo de la pantalla de inicio");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LogoInicio.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(50, 40, 240, 110);
+        jLabel1.setBounds(0, 0, 700, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
