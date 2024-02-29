@@ -8,7 +8,7 @@ package com.tfmsihuac.tfmsihuac;
 import Controladores.metodos;
 import Controladores.usuarioController;
 import Entidades.usuario;
-import com.sun.org.apache.bcel.internal.generic.IFEQ;
+//import com.sun.org.apache.bcel.internal.generic.IFEQ;
 import java.util.*;
 import javax.swing.JButton;
 /**
