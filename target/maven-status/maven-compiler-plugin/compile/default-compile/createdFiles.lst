@@ -12,7 +12,6 @@ Controladores\usuarioController.class
 Controladores\clienteController.class
 Controladores\valor_HospController$1.class
 Controladores\reservacionController.class
-com\tfmsihuac\tfmsihuac\InicioSesion$4.class
 Controladores\metodos$3.class
 Coneccion\Datos.class
 Entidades\cliente_Hab.class
