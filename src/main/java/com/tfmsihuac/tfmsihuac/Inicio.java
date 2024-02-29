@@ -115,7 +115,7 @@ public class Inicio extends javax.swing.JFrame {
         lblInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Inicio2");
+        setTitle("Inicio");
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(700, 300));
         getContentPane().setLayout(null);
