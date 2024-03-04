@@ -17,9 +17,10 @@ public class Datos {
     String BD="jdbc:postgresql://localhost:5432/huaca";
     String usuario="postgres";
     String contra="21061993";
-    try{
-        String classname = "org.postgresql.Driver";
-        URL url = Class.forName("org.postgresql.Driver").getResource("/" + classname.replace('.', '/') + ".class");
+    String classname = "org.postgresql.Driver";
+    URL url = null;
+    try{        
+        url = Class.forName("org.postgresql.Driver").getResource("/" + classname.replace('.', '/') + ".class");
         System.out.println("La ubicación de " + classname + " es: " + url);
         Class.forName("org.postgresql.Driver");
         //conector = DriverManager.getConnection(BD,usuario,contra);
@@ -28,6 +29,7 @@ public class Datos {
         //JOptionPane.showMessageDialog(null,"Coneccion exitosa");
     } catch(Exception e){
         System.out.println("Error al conectar: "+e);
+        System.out.println("La ubicación de " + classname + " es: " + url);
         //JOptionPane.showMessageDialog(null,"Error al conectar: "+e);
     }
     return conector;
