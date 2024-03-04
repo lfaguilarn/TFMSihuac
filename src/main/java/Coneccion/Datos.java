@@ -22,7 +22,7 @@ public class Datos {
     try{        
         url = Class.forName("org.postgresql.Driver").getResource("/" + classname.replace('.', '/') + ".class");
         System.out.println("La ubicación de " + classname + " es: " + url);
-        Class.forName("org.postgresql.Driver");
+        Class.forName("jar:file:/C:/Users/Luis%20Fernando/.m2/repository/org/postgresql/postgresql/42.6.1/postgresql-42.6.1.jar!/org/postgresql/Driver.class");
         //conector = DriverManager.getConnection(BD,usuario,contra);
         conector = DriverManager.getConnection(BD,usuario,contra);
         System.out.println("conectar "+ param);
