@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Coneccion;
+import java.net.URL;
 import java.sql.*;
 import javax.swing.JOptionPane;
 /**
@@ -17,7 +18,10 @@ public class Datos {
     String usuario="postgres";
     String contra="21061993";
     try{
+        String classname = "org.postgresql.Driver";
         Class.forName("org.postgresql.Driver");
+        URL url = Class.forName("org.postgresql.Driver").getResource("/" + classname.replace('.', '/') + ".class");
+        System.out.println("La ubicación de " + classname + " es: " + url);
         //conector = DriverManager.getConnection(BD,usuario,contra);
         conector = DriverManager.getConnection(BD,usuario,contra);
         System.out.println("conectar "+ param);
