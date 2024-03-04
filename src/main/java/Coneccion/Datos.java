@@ -28,8 +28,8 @@ public class Datos {
         System.out.println("conectar "+ param);
         //JOptionPane.showMessageDialog(null,"Coneccion exitosa");
     } catch(Exception e){
-        System.out.println("Error al conectar: "+e);
         System.out.println("La ubicación de " + classname + " es: " + url);
+        System.out.println("Error al conectar: "+e);
         //JOptionPane.showMessageDialog(null,"Error al conectar: "+e);
     }
     return conector;
