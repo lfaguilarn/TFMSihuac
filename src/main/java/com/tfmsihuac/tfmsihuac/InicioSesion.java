@@ -87,10 +87,12 @@ public class InicioSesion extends javax.swing.JFrame {
         jLabel3.setBounds(80, 130, 110, 50);
 
         txtUsuario.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        txtUsuario.setToolTipText("Ingrese el usuario otorgado por el administrador");
         getContentPane().add(txtUsuario);
         txtUsuario.setBounds(140, 180, 340, 40);
 
         txtClave.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        txtClave.setToolTipText("Ingrese su contraseña");
         getContentPane().add(txtClave);
         txtClave.setBounds(140, 260, 340, 40);
 
