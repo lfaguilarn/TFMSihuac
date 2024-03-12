@@ -177,9 +177,9 @@ public class InicioSesion extends javax.swing.JFrame {
             if (cl) {
                 controlUser.cambiarEstado("Activo", txtUsuario.getText());
                 metodo.mensajeDialogo(metodo.personalizarMsj("Bienvenid@ "+userName, metodo.verde, "times new roman", metodo.titulo2, true, false, false), "SiHuac - Sistema Informático de la Huaca", metodo.informacion);
-                //Principal p = new Principal();
-                //p.setVisible(true);
-                //this.dispose();
+                Principal p = new Principal();
+                p.setVisible(true);
+                this.dispose();
                 
             }else{
                 metodo.mensajeDialogo(metodo.personalizarMsj("Clave incorrecta", metodo.rojo, "times new roman", metodo.titulo2, true, false, false), "SiHuac - Sistema Informático de la Huaca", metodo.error);

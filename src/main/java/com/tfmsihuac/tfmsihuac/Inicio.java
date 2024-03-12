@@ -88,11 +88,9 @@ public class Inicio extends javax.swing.JFrame {
                     tiempo1.stop();
                 }
                 if (cont==1&&ver) {
-                    /*
                     Principal prin = new Principal();
                     prin.setVisible(ver);
                     dispose();
-                    */
                     System.out.println("Usuario logueado");
                     tiempo1.stop();
                 }
