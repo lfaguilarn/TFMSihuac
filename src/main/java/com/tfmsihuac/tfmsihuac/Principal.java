@@ -1031,6 +1031,7 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         btnCliente = new javax.swing.JButton();
         btnHab = new javax.swing.JButton();
         btnPrecioHab = new javax.swing.JButton();
@@ -3017,6 +3018,7 @@ public class Principal extends javax.swing.JFrame {
         panelRes.add(lblTotalRes);
         lblTotalRes.setBounds(280, 260, 4, 4);
 
+        buttonGroup1.add(CuadriculaRes);
         CuadriculaRes.setForeground(new java.awt.Color(255, 255, 255));
         CuadriculaRes.setSelected(true);
         CuadriculaRes.setText("Ver Cuadrícula");
@@ -3029,6 +3031,7 @@ public class Principal extends javax.swing.JFrame {
         panelRes.add(CuadriculaRes);
         CuadriculaRes.setBounds(280, 350, 95, 23);
 
+        buttonGroup1.add(TablaRes);
         TablaRes.setForeground(new java.awt.Color(255, 255, 255));
         TablaRes.setText("Ver en Tabla");
         TablaRes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -5779,6 +5782,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnReserv;
     private javax.swing.JButton btnUsuarios;
     private javax.swing.JButton btnVisitas;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox chBoxCliente;
     private javax.swing.JCheckBox chBoxHab;
     private javax.swing.JCheckBox chBoxReservacion;
