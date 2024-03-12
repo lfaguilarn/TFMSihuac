@@ -11,6 +11,9 @@ import Entidades.habitacion;
 import Entidades.reservacion;
 import Entidades.usuario;
 import Entidades.visita;
+import com.toedter.calendar.JDateChooser;
+import com.toedter.calendar.JTextFieldDateEditor;
+import com.toedter.components.JSpinField;
 //import com.tfmsihuac.tfmsihuac.Inicio;
 //import com.toedter.calendar.JDateChooser;
 //import com.toedter.calendar.JTextFieldDateEditor;
@@ -1683,7 +1686,7 @@ public int normal = 13;
           contX++;
       }
   }
-  /*
+  
   public void establecerFechMin(JDateChooser chooser, Date date, int cantDias){
       date.setTime(date.getTime()+(cantDias*(1000*60*60*24)));
       chooser.setMinSelectableDate(date);
@@ -1713,12 +1716,11 @@ public int normal = 13;
       tabla.setRowHeight(spn.getValue()+8);
       tabla.setFont(new Font("Times New Roman", Font.PLAIN, spn.getValue()));
   }
-  */
+  
   public void tamañoFuenteTablaSpn(JSpinner spn, JTable tabla){
       tabla.setRowHeight((int)spn.getValue()+8);
       tabla.setFont(new Font("Times New Roman", Font.PLAIN, (int)spn.getValue()));
   }
-  
   public void txtEditable(JTextField[] txt, boolean enabled){
       for (int i = 0; i < txt.length; i++) {
           txt[i].setEditable(enabled);
