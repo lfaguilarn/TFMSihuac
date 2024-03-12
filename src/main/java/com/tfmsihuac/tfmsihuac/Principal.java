@@ -41,6 +41,7 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema Informático de Hosteria La Huaca");
         setResizable(false);
         getContentPane().setLayout(null);
 
