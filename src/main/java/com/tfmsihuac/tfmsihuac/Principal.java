@@ -1355,12 +1355,12 @@ public class Principal extends javax.swing.JFrame {
         spinCantDiasRes = new javax.swing.JSpinner();
         spinCantNiñoRes = new javax.swing.JSpinner();
         spinCantAdultRes = new javax.swing.JSpinner();
+        btnHoraRes = new javax.swing.JButton();
         spinTamTblRes = new javax.swing.JSpinner();
         jScrollPane3 = new javax.swing.JScrollPane();
         TablaReservacion = new javax.swing.JTable();
         lblFondoPanelRes1 = new javax.swing.JLabel();
         lblFondoPanelRes = new javax.swing.JLabel();
-        btnHoraRes = new javax.swing.JButton();
         panelCliente = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaCliente = new javax.swing.JTable();
@@ -3212,6 +3212,32 @@ public class Principal extends javax.swing.JFrame {
         panelRes.add(spinCantAdultRes);
         spinCantAdultRes.setBounds(30, 270, 31, 20);
 
+        btnHoraRes.setToolTipText("Elegir hora del check-in");
+        btnHoraRes.setBorder(null);
+        btnHoraRes.setContentAreaFilled(false);
+        btnHoraRes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHoraRes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHoraResMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHoraResMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnHoraResMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnHoraResMouseReleased(evt);
+            }
+        });
+        btnHoraRes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHoraResActionPerformed(evt);
+            }
+        });
+        panelRes.add(btnHoraRes);
+        btnHoraRes.setBounds(550, 290, 1, 1);
+
         spinTamTblRes.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         spinTamTblRes.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -3250,32 +3276,6 @@ public class Principal extends javax.swing.JFrame {
         lblFondoPanelRes1.setBounds(220, 160, 0, 0);
         panelRes.add(lblFondoPanelRes);
         lblFondoPanelRes.setBounds(220, 160, 0, 0);
-
-        btnHoraRes.setToolTipText("Elegir hora del check-in");
-        btnHoraRes.setBorder(null);
-        btnHoraRes.setContentAreaFilled(false);
-        btnHoraRes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnHoraRes.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnHoraResMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnHoraResMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnHoraResMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnHoraResMouseReleased(evt);
-            }
-        });
-        btnHoraRes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHoraResActionPerformed(evt);
-            }
-        });
-        panelRes.add(btnHoraRes);
-        btnHoraRes.setBounds(550, 290, 1, 1);
 
         getContentPane().add(panelRes);
         panelRes.setBounds(430, 30, 780, 560);
