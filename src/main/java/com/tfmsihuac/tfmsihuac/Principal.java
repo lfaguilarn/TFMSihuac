@@ -266,7 +266,7 @@ public class Principal extends javax.swing.JFrame {
         txtAbonoRes.setVisible(ver);
         lblHoraRes.setVisible(ver);
         txtHoraRes.setVisible(ver);
-        //btnHoraRes.setVisible(ver);
+        btnHoraRes.setVisible(ver);
         btnGuardarRes.setVisible(ver);
     }
     
@@ -864,9 +864,9 @@ public class Principal extends javax.swing.JFrame {
         txtHoraRes.setBounds(metodo.tamaños(anchoVentana, 882), metodo.tamaños(altoVentana, 6749), metodo.tamaños(anchoVentana, 729), metodo.tamaños(altoVentana, 388));
         txtHoraRes.setFont(new Font("Times New Roman", Font.PLAIN, tamañoLetra*3/4));
         txtHoraRes.setText(metodo.de24A12Horas(new Date().getHours()+":"+new Date().getMinutes()));
-        //txtHoraRes.setEditable(false);
-        //btnHoraRes.setBounds(metodo.tamaños(anchoVentana, 1700), metodo.tamaños(altoVentana, 6500), metodo.tamaños(anchoVentana, 391), metodo.tamaños(altoVentana, 728));
-        //metodo.cambiarImgBoton(btnHoraRes, "reloj1.png");
+        txtHoraRes.setEditable(false);
+        btnHoraRes.setBounds(metodo.tamaños(anchoVentana, 1700), metodo.tamaños(altoVentana, 6500), metodo.tamaños(anchoVentana, 391), metodo.tamaños(altoVentana, 728));
+        metodo.cambiarImgBoton(btnHoraRes, "reloj1.png");
         lblTotalRes.setBounds(metodo.tamaños(anchoVentana, 104), metodo.tamaños(altoVentana, 7287), metodo.tamaños(anchoVentana, 1432), metodo.tamaños(altoVentana, 975));
         lblTotalRes.setFont(new Font("Times New Roman", Font.BOLD, tamañoLetra*2));
         lblTotalRes.setText(controlReserv.calcCostRes(Integer.parseInt(spinCantAdultRes.getValue().toString()), Integer.parseInt(spinCantNiñoRes.getValue().toString()), Integer.parseInt(spinCantDiasRes.getValue().toString()), valoresHosp, "1"));
@@ -1360,6 +1360,7 @@ public class Principal extends javax.swing.JFrame {
         TablaReservacion = new javax.swing.JTable();
         lblFondoPanelRes1 = new javax.swing.JLabel();
         lblFondoPanelRes = new javax.swing.JLabel();
+        btnHoraRes = new javax.swing.JButton();
         panelCliente = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaCliente = new javax.swing.JTable();
@@ -3249,6 +3250,32 @@ public class Principal extends javax.swing.JFrame {
         lblFondoPanelRes1.setBounds(220, 160, 0, 0);
         panelRes.add(lblFondoPanelRes);
         lblFondoPanelRes.setBounds(220, 160, 0, 0);
+
+        btnHoraRes.setToolTipText("Elegir hora del check-in");
+        btnHoraRes.setBorder(null);
+        btnHoraRes.setContentAreaFilled(false);
+        btnHoraRes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHoraRes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnHoraResMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnHoraResMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnHoraResMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btnHoraResMouseReleased(evt);
+            }
+        });
+        btnHoraRes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHoraResActionPerformed(evt);
+            }
+        });
+        panelRes.add(btnHoraRes);
+        btnHoraRes.setBounds(550, 290, 1, 1);
 
         getContentPane().add(panelRes);
         panelRes.setBounds(430, 30, 780, 560);
@@ -5687,6 +5714,26 @@ public class Principal extends javax.swing.JFrame {
         metodo.cambiarMouseLbl(this.metodo.defecto, this.lblFondoPrincipal);
     }//GEN-LAST:event_lblFondoPrincipalMouseReleased
 
+    private void btnHoraResMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoraResMouseEntered
+        metodo.cambiarImgBoton(btnHoraRes, "reloj2.png");
+    }//GEN-LAST:event_btnHoraResMouseEntered
+
+    private void btnHoraResMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoraResMouseExited
+        metodo.cambiarImgBoton(btnHoraRes, "reloj1.png");
+    }//GEN-LAST:event_btnHoraResMouseExited
+
+    private void btnHoraResMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoraResMousePressed
+        metodo.cambiarImgBoton(btnHoraRes, "reloj3.png");
+    }//GEN-LAST:event_btnHoraResMousePressed
+
+    private void btnHoraResMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnHoraResMouseReleased
+        metodo.cambiarImgBoton(btnHoraRes, "reloj2.png");
+    }//GEN-LAST:event_btnHoraResMouseReleased
+
+    private void btnHoraResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHoraResActionPerformed
+        //timePicker1.showPopup(panelRes, metodo.tamaños(anchoVentana, 2188), metodo.tamaños(altoVentana, 5225));
+    }//GEN-LAST:event_btnHoraResActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5724,6 +5771,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnHab7;
     private javax.swing.JButton btnHab8;
     private javax.swing.JButton btnHab9;
+    private javax.swing.JButton btnHoraRes;
     private javax.swing.JButton btnLimpiarCliente;
     private javax.swing.JButton btnLimpiarClienteHab;
     private javax.swing.JButton btnLimpiarUsuario;
